@@ -7,16 +7,18 @@ class MyHashSet {
     
     public void add(int key) {
         if(hashSet[key]==0){
-            hashSet[key]++;
+            hashSet[key]=1;
         }
     }
     
     public void remove(int key) {
-        hashSet[key]--;
+        if(hashSet[key]!=0){
+            hashSet[key]=0;
+        }
     }
     
     public boolean contains(int key) {
-        return hashSet[key] != 0;
+        return hashSet[key] > 0;
         
     }
 }
